@@ -33,7 +33,7 @@ jobs:
               run: echo "current_date=$(date +'%I%M_%Y%m%d')" >> $GITHUB_ENV
 
             - name: Upload debug APK
-              uses: actions/upload-artifact@v4
+              uses: actions/upload-artifact@v7
               with:
                 name: '${{ inputs.app-name }}-debug-${{ env.current_date }}'
                 path: app/build/outputs/apk/debug/*.apk
